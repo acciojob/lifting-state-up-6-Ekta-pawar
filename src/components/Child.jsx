@@ -7,7 +7,7 @@ const Child = ({todos,handleComplete}) => {
       {todos.map((todo) => (
         <li key={todo.id}>
           {todo.completed ? (
-            {todo.text}
+           <s> {todo.text}</s>
           ) : (
             <>
               {todo.text}{" "}
