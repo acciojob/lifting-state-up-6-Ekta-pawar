@@ -3,17 +3,13 @@ import React from 'react'
 const Child = ({todos,handleComplete}) => {
   return (
     <div>
+      
             <ul>
+              <h2>Child Component</h2>
       {todos.map((todo) => (
         <li key={todo.id}>
-          {todo.completed ? (
-           <s> {todo.text}</s>
-          ) : (
-            <>
-              {todo.text}{" "}
-              <button onClick={() => handleComplete(todo.id)}>Complete</button>
-            </>
-      )}
+          <p>{todo.text}</p>
+          {!todo.completed && <button onClick={() =>handleComplete(todo.id)}>Completed</button>}
         </li>
       ))}
     </ul>
